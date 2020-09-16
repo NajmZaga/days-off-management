@@ -38,5 +38,3 @@ query.exec((err, res) => {
     }
   }
 });
-
-console.log("installing db");
