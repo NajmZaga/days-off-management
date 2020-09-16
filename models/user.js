@@ -23,7 +23,7 @@ const userShcema = mongoose.Schema({
   },
   endDate: {
     type: Date,
-    required: true,
+    required: false,
   },
   role: {
     type: String,
