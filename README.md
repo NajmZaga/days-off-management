@@ -1,1 +1,1 @@
-# days-off-management
+# Days off management application (Express js API)
