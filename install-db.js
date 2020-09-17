@@ -3,7 +3,7 @@ require('dotenv').config();
 const User = require('./models/user');
 const { database, openConnection } = require('./database');
 
-const passwordEncryption = require('./utils/password-utils');
+const { hashPassword } = require('./utils/password-utils');
 
 /* ::::::::::::::: Database connection ::::::::::::::: */
 openConnection(process.env.DATABASE);
@@ -19,7 +19,7 @@ query.exec((err, res) => {
       console.log('Super admin is already exist!');
       return process.exit();
     } else {
-      passwordEncryption('hello').then((hashedPassword) => {
+      hashPassword('hello').then((hashedPassword) => {
         const user = new User({
           firstName: "admin",
           lastName: "admin",
