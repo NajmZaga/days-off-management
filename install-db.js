@@ -19,7 +19,7 @@ query.exec((err, res) => {
       console.log('Super admin is already exist!');
       return process.exit();
     } else {
-      hashPassword('hello').then((hashedPassword) => {
+      hashPassword('123456').then((hashedPassword) => {
         const user = new User({
           firstName: "admin",
           lastName: "admin",
